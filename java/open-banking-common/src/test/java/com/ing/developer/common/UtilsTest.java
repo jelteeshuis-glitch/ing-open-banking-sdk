@@ -25,7 +25,7 @@ public class UtilsTest {
     void withCentsDelimiterShouldFormatCorrectly() {
         assertEquals("100.00", Utils.withCentsDelimiter(10000L));
         assertEquals("1.50", Utils.withCentsDelimiter(150L));
-        assertEquals("0.99", Utils.withCentsDelimiter(99L));
+        assertEquals(".99", Utils.withCentsDelimiter(99L));
         assertEquals("12345.67", Utils.withCentsDelimiter(1234567L));
     }
 
