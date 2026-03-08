@@ -127,7 +127,7 @@
                         <generateModelTests>false</generateModelTests>
                         <configOptions>
                             <dateLibrary>java8</dateLibrary>
-                            <library>jersey2</library>
+                            <library>jersey3</library>
                         </configOptions>
                     </configuration>
                     <executions>
