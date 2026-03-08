@@ -6,7 +6,7 @@ import com.ing.developer.showcase.client.ApiClient;
 import com.ing.developer.showcase.client.ApiException;
 import com.ing.developer.showcase.client.api.ShowcaseApiApi;
 
-import javax.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.ClientBuilder;
 import java.security.PrivateKey;
 
 public class ProductionShowcaseAPI {

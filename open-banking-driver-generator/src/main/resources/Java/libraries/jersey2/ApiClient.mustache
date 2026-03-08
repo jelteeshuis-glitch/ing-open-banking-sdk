@@ -18,16 +18,16 @@ import org.tomitribe.auth.signatures.Signature;
 import org.tomitribe.auth.signatures.Signer;
 import com.ing.developer.common.OBSigner;
 
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.Entity;
-import javax.ws.rs.client.Invocation;
-import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.Form;
-import javax.ws.rs.core.GenericType;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.Status;
+import jakarta.ws.rs.client.Client;
+import jakarta.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.Entity;
+import jakarta.ws.rs.client.Invocation;
+import jakarta.ws.rs.client.WebTarget;
+import jakarta.ws.rs.core.Form;
+import jakarta.ws.rs.core.GenericType;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
+import jakarta.ws.rs.core.Response.Status;
 
 import java.nio.charset.StandardCharsets;
 import org.apache.commons.codec.binary.Hex;
@@ -109,7 +109,7 @@ import {{invokerPackage}}.auth.ApiKeyAuth;
 import {{invokerPackage}}.auth.OAuth;
 {{/hasOAuthMethods}}
 
-import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
+import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
 
 {{>generatedAnnotation}}
 public class ApiClient{{#jsr310}} extends JavaTimeFormatter{{/jsr310}} {
@@ -1201,7 +1201,7 @@ public class ApiClient{{#jsr310}} extends JavaTimeFormatter{{/jsr310}} {
     } else {
         mandatoryHeaders.put("Accept", "application/json");
     }
-    mandatoryHeaders.put("User-Agent", "openbanking-sdk/0.0.3-SNAPSHOT java");
+    mandatoryHeaders.put("User-Agent", "openbanking-sdk/1.0.0-SNAPSHOT java");
     mandatoryHeaders.put("Digest", digest(body == null ? "" : body.toString()));
     mandatoryHeaders.put("Date", ZonedDateTime.now(ZoneId.of("GMT")).format(FORMATTER));
 
@@ -1499,7 +1499,7 @@ public class ApiClient{{#jsr310}} extends JavaTimeFormatter{{/jsr310}} {
 
       final Map<String, String> mandatoryHeaders = new HashMap<String, String>();
       mandatoryHeaders.put("Accept", "application/json");
-      mandatoryHeaders.put("User-Agent", "openbanking-sdk/0.0.3-SNAPSHOT java");
+      mandatoryHeaders.put("User-Agent", "openbanking-sdk/1.0.0-SNAPSHOT java");
       mandatoryHeaders.put("Date", ZonedDateTime.now(ZoneId.of("GMT")).format(FORMATTER));
 
       if (!this.mTLSPinning) {

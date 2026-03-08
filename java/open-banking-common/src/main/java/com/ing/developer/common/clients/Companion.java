@@ -9,8 +9,8 @@ import org.glassfish.jersey.logging.LoggingFeature;
 
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.ClientRequestFilter;
+import jakarta.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.ClientRequestFilter;
 import java.io.IOException;
 import java.security.*;
 import java.security.cert.Certificate;

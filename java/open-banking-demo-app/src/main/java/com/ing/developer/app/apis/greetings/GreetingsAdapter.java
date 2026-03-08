@@ -4,10 +4,10 @@ import com.ing.developer.showcase.client.ApiException;
 import com.ing.developer.showcase.client.api.ShowcaseApiApi;
 import org.springframework.stereotype.Component;
 
-import javax.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.MediaType;
 
 import static com.ing.developer.app.common.GenericAdapterErrorHandler.throwInternalizedException;
-import static javax.ws.rs.core.MediaType.APPLICATION_FORM_URLENCODED;
+import static jakarta.ws.rs.core.MediaType.APPLICATION_FORM_URLENCODED;
 
 @Component
 public class GreetingsAdapter {

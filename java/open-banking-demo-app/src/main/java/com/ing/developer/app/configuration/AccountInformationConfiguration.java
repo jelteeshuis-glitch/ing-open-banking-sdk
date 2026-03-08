@@ -7,7 +7,7 @@ import com.ing.developer.common.clients.Companion;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 
-import javax.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.ClientBuilder;
 import java.security.PrivateKey;
 import java.util.Arrays;
 
