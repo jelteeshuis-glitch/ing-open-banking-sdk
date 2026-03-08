@@ -824,7 +824,7 @@ public class ApiClient{{#jsr310}} extends JavaTimeFormatter{{/jsr310}} {
    * @return The Accept header to use. If the given array is empty,
    *   null will be returned (not to set the Accept header explicitly).
    */
-  public String selectHeaderAccept(String[] accepts) {
+  public String selectHeaderAccept(String... accepts) {
     if (accepts.length == 0) {
       return null;
     }
@@ -845,7 +845,7 @@ public class ApiClient{{#jsr310}} extends JavaTimeFormatter{{/jsr310}} {
    * @return The Content-Type header to use. If the given array is empty,
    *   JSON will be used.
    */
-  public String selectHeaderContentType(String[] contentTypes) {
+  public String selectHeaderContentType(String... contentTypes) {
     if (contentTypes.length == 0) {
       return "application/json";
     }
