@@ -1196,7 +1196,7 @@ public class ApiClient{{#jsr310}} extends JavaTimeFormatter{{/jsr310}} {
     String applicationAccessToken = token.access_token;
 
     final Map<String, String> mandatoryHeaders = new HashMap<String, String>();
-    if (!accept.isEmpty()) {
+    if (accept != null && !accept.isEmpty()) {
         mandatoryHeaders.put("Accept", accept);
     } else {
         mandatoryHeaders.put("Accept", "application/json");
