@@ -12,8 +12,8 @@ You can use this SDK to generate drivers for both Premium and PSD2 APIs. Read ou
 - [x] Wrapper class for OAuth 2.0 technical driver (using OpenAPI Generator)
 
 ## Dependencies:
-* Java JDK 1.8+
-* Maven 3.6+
+* Java JDK 17+
+* Maven 3.9+
 * CURL
 
 ## Quick Start (*nix)
@@ -135,7 +135,7 @@ The 1st step is to import the required classes.
 import com.ing.developer.common.Utils;
 import com.ing.developer.common.clients.Companion;
 import com.ing.developer.common.clients.OpenBankingOAuthApi;
-import javax.ws.rs.client.Client;
+import jakarta.ws.rs.client.Client;
 ```
 
 The OpenBankingOAuthApi requires a keyId, trustMaterial and Client.
@@ -177,7 +177,7 @@ import com.ing.developer.common.Utils;
 import com.ing.developer.common.clients.Companion;
 import com.ing.developer.common.clients.OpenBankingOAuthApi;
 
-import javax.ws.rs.client.Client;
+import jakarta.ws.rs.client.Client;
 import java.security.PrivateKey;
 import java.security.cert.Certificate;
 
@@ -225,7 +225,7 @@ import com.ing.developer.common.clients.Companion;
 import com.ing.developer.common.clients.OpenBankingOAuthApi;
 import org.openapitools.client.model.TokenResponse;
 
-import javax.ws.rs.client.Client;
+import jakarta.ws.rs.client.Client;
 import java.security.PrivateKey;
 import java.security.cert.Certificate;
 
@@ -329,7 +329,7 @@ import com.ing.developer.common.Utils;
 import com.ing.developer.common.clients.Companion;
 import org.openapitools.client.model.TokenResponse;
 
-import javax.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.ClientBuilder;
 import java.security.PrivateKey;
 import java.util.List;
 import java.util.UUID;
@@ -420,7 +420,7 @@ import com.ing.developer.payment.request.client.model.CertificateResponse;
 import com.ing.developer.payment.request.client.model.DailyReceivableLimit;
 import com.ing.developer.payment.request.client.model.RegistrationRequest;
 
-import javax.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.ClientBuilder;
 import java.math.BigDecimal;
 import java.security.PrivateKey;
 
@@ -494,7 +494,7 @@ import com.ing.developer.common.clients.Companion;
 import com.ing.developer.showcase.client.ApiException;
 import com.ing.developer.showcase.client.api.GreetingsApi;
 
-import javax.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.ClientBuilder;
 import java.security.PrivateKey;
 
 public class ProductionShowcaseAPI {
@@ -537,7 +537,7 @@ import com.ing.developer.common.clients.Companion;
 import com.ing.developer.showcase.client.ApiException;
 import com.ing.developer.showcase.client.api.GreetingsApi;
 
-import javax.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.ClientBuilder;
 import java.security.PrivateKey;
 
 public class ProductionShowcaseAPI {
@@ -581,7 +581,7 @@ import com.ing.developer.common.clients.Companion;
 import com.ing.developer.showcase.client.ApiException;
 import com.ing.developer.showcase.client.api.GreetingsApi;
 
-import javax.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.ClientBuilder;
 import java.security.PrivateKey;
 
 public class ProductionShowcaseAPI {
@@ -645,7 +645,7 @@ import com.ing.developer.common.clients.Companion;
 import com.ing.developer.showcase.client.ApiException;
 import com.ing.developer.showcase.client.api.GreetingsApi;
 
-import javax.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.ClientBuilder;
 import java.security.PrivateKey;
 
 public class ProductionShowcaseAPI {
@@ -662,6 +662,17 @@ public class ProductionShowcaseAPI {
     }
 }
 ```
+
+## Migration Notes
+
+This version introduces several breaking changes:
+
+- **Java 17 minimum**: Java 8 and 11 are no longer supported. You must use Java 17 or later.
+- **Jakarta EE namespace**: All `javax.ws.rs.*` imports have been changed to `jakarta.ws.rs.*`. If you consume this SDK, you must update your own imports accordingly. Note: `javax.net.ssl.*`, `javax.crypto.*`, and `javax.security.*` remain unchanged (these are JDK classes, not Jakarta EE).
+- **Spring Boot 3.4.x**: The demo and simple apps now use Spring Boot 3.4.3.
+- **Jersey 3.1.x**: The HTTP client library has been upgraded from Jersey 2.x to 3.1.x.
+
+For a detailed migration guide, see [MIGRATION.md](MIGRATION.md).
 
 ## CLI
 To test your connection to ING Open Banking APIs we also provide a [Command Line Interface (CLI)](https://github.com/ing-bank/ing-open-banking-cli) using scripts.

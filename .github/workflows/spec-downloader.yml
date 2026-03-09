@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout master branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           ref: master
       - name: Make build destination directory
@@ -35,7 +35,7 @@ jobs:
           git commit -m 'chore: Update swagger docs'
       - name: Push changes
         if: env.GIT_PUSH == 'true'
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@v0.8.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ env.GIT_BRANCH }}

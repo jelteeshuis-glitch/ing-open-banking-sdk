@@ -9,7 +9,7 @@ import com.ing.developer.payment.request.client.model.CertificateResponse;
 import com.ing.developer.payment.request.client.model.DailyReceivableLimit;
 import com.ing.developer.payment.request.client.model.RegistrationRequest;
 
-import javax.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.ClientBuilder;
 import java.math.BigDecimal;
 import java.security.PrivateKey;
 

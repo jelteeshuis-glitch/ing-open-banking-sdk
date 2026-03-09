@@ -7,7 +7,7 @@ import com.ing.developer.payment.request.client.api.RegistrationApi;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 
-import javax.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.ClientBuilder;
 import java.security.PrivateKey;
 import java.util.Arrays;
 

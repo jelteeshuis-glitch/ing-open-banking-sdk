@@ -10,7 +10,7 @@ import org.openapitools.client.api.DefaultApi;
 import org.openapitools.client.model.AuthorizationURLResponse;
 import org.openapitools.client.model.TokenResponse;
 
-import javax.ws.rs.client.Client;
+import jakarta.ws.rs.client.Client;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
@@ -102,7 +102,7 @@ public class OpenBankingOAuthApi {
     private Map<String, String> getMandatoryHeaders(String digest, String date) {
         return Collections.unmodifiableMap(new HashMap<String, String>() {{
             put("Accept", "application/json");
-            put("User-Agent", "openbanking-sdk/0.0.3-SNAPSHOT java");
+            put("User-Agent", "openbanking-sdk/1.0.0-SNAPSHOT java");
             put("Digest", digest);
             put("Date", date);
         }});

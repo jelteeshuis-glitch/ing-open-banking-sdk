@@ -4,7 +4,7 @@ import com.ing.developer.common.Utils;
 import com.ing.developer.common.clients.Companion;
 import com.ing.developer.common.clients.OpenBankingOAuthApi;
 
-import javax.ws.rs.client.Client;
+import jakarta.ws.rs.client.Client;
 import java.security.PrivateKey;
 import java.security.cert.Certificate;
 

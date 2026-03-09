@@ -8,7 +8,7 @@ import com.ing.developer.common.Utils;
 import com.ing.developer.common.clients.Companion;
 import org.openapitools.client.model.TokenResponse;
 
-import javax.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.ClientBuilder;
 import java.security.PrivateKey;
 import java.util.List;
 import java.util.UUID;

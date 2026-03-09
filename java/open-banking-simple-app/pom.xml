@@ -6,20 +6,19 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.3.RELEASE</version>
+        <version>3.4.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>com.ing.developer</groupId>
     <artifactId>open-banking-simple-app</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>Open Banking Simple App</name>
     <description>Open Banking simple app for testing purposes</description>
 
     <properties>
-        <java.version>11</java.version>
-        <open-banking-sdk.version>0.0.3-SNAPSHOT</open-banking-sdk.version>
-        <jackson.version>2.12.7.1</jackson.version>
+        <java.version>17</java.version>
+        <open-banking-sdk.version>1.0.0-SNAPSHOT</open-banking-sdk.version>
         <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
 
@@ -54,13 +53,12 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <scope>runtime</scope>
-            <version>${jackson.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
+            <version>4.5.14</version>
             <scope>runtime</scope>
-            <version>${httpclient.version}</version>
         </dependency>
     </dependencies>
 
@@ -69,7 +67,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>2.4</version>
+                <version>3.4.2</version>
                 <configuration>
                     <archive>
                         <manifest>
