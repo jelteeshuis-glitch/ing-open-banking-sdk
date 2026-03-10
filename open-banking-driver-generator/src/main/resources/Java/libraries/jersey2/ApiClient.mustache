@@ -906,6 +906,20 @@ public class ApiClient{{#jsr310}} extends JavaTimeFormatter{{/jsr310}} {
   }
 
   /**
+   * Select the Accept header's value from the given accept string.
+   *
+   * @param accept The accept string to select from
+   * @return The Accept header to use. If the given string is empty,
+   *   null will be returned.
+   */
+  public String selectHeaderAccept(String accept) {
+    if (accept == null || accept.isEmpty()) {
+      return null;
+    }
+    return selectHeaderAccept(new String[]{accept});
+  }
+
+  /**
    * Select the Content-Type header's value from the given array:
    *   if JSON exists in the given array, use it;
    *   otherwise use the first one of the array.
@@ -924,6 +938,29 @@ public class ApiClient{{#jsr310}} extends JavaTimeFormatter{{/jsr310}} {
       }
     }
     return contentTypes[0];
+  }
+
+  /**
+   * Select the Content-Type header's value from the given content type string.
+   *
+   * @param contentType The content type string to select from
+   * @return The Content-Type header to use. If the given string is empty,
+   *   JSON will be used.
+   */
+  public String selectHeaderContentType(String contentType) {
+    if (contentType == null || contentType.isEmpty()) {
+      return "application/json";
+    }
+    return selectHeaderContentType(new String[]{contentType});
+  }
+
+  /**
+   * Select the Content-Type header with no arguments (defaults to JSON).
+   *
+   * @return The Content-Type header to use (application/json).
+   */
+  public String selectHeaderContentType() {
+    return "application/json";
   }
 
   /**
