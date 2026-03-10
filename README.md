@@ -1,4 +1,7 @@
 # ING Open Banking SDK
+
+![CI](https://github.com/jelteeshuis-glitch/ing-open-banking-sdk/actions/workflows/main.yml/badge.svg)
+
 The ING Open Banking SDK allows you to automatically generate drivers to interact with ING's Open Banking APIs. It includes a custom generator that creates drivers with few simple steps given the Open API spec (swagger documentation), and it encapsulates mTLS only, JWS signature signing, HTTP signature signing and OAuth application token flows. With the demo app within this SDK , you can test the generated drivers, test the Authorization flow, and check the account information of the test users available in the Sandbox environment. The demo app shows that these drivers significantly reduce complexity to interact with ING's Open Banking APIs. Since the drivers are generated from Open API specification files, updating is easy by regenerating the drivers based on updated Open API specification files.
 
 You can use this SDK to generate drivers for both Premium and PSD2 APIs. Read our [product page](https://developer.ing.com/api-marketplace/marketplace) for more information.
@@ -662,6 +665,27 @@ public class ProductionShowcaseAPI {
     }
 }
 ```
+
+## Testing
+
+This project includes a comprehensive unit test suite. See [TESTING.md](TESTING.md) for detailed instructions on:
+
+- Running unit and integration tests
+- Viewing JaCoCo code coverage reports
+- Test conventions and directory structure
+- Test keystore generation
+
+Quick start:
+
+```bash
+# Run all unit tests
+mvn test
+
+# Run tests for a specific module
+mvn test -pl java/open-banking-common
+```
+
+**OpenAPI Generator version:** All modules now use OpenAPI Generator **7.4.0** consistently.
 
 ## CLI
 To test your connection to ING Open Banking APIs we also provide a [Command Line Interface (CLI)](https://github.com/ing-bank/ing-open-banking-cli) using scripts.
